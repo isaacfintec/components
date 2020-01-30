@@ -11,7 +11,7 @@ const ProviderContainer = (props) => {
     payroll,
   } = props;
 
-  const type = AMORTIZATION_TABLE;
+  const _type = AMORTIZATION_TABLE;
 
   const dataProvider = (_type) => {
     switch (_type) {
@@ -27,10 +27,12 @@ const ProviderContainer = (props) => {
     }
   };
 
-  const data = dataProvider(type);
+  const data = dataProvider(_type);
+  const type = 'simulation';
+  // const type = 'pulledApart';
 
   return (
-    <NewCredit data={{ amortization, periods, payroll }} />
+    <NewCredit data={{type, amortization, periods, payroll }} />
   );
 };
 

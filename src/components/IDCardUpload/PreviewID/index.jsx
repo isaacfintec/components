@@ -20,7 +20,7 @@ const PreviewID = ({ file, onDelete, label, className }) => {
 
   const constructImage = () => ({
     url,
-    name: label
+    name: label,
   });
 
   const handleOnDelete = () => {

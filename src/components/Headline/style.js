@@ -4,7 +4,7 @@ const useStyles = makeStyles(theme => ({
   headline: {
     fontSize: '1rem',
     height: 'auto',
-    padding: '0px 5px',
+    padding: '0px',
     '& span': {
       fontSize: '1.2rem',
       fontWeight: 'normal',

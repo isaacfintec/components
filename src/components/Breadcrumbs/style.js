@@ -4,7 +4,7 @@ const useStyles = makeStyles(theme => ({
   breadcrumbs: {
     fontSize: '0.8rem',
     height: 'auto',
-    padding: '5px',
+    padding: '0px',
     '& li': {
       padding: '2px',
       margin: '0px',

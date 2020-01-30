@@ -8,6 +8,8 @@ const useStyles = makeStyles(theme => ({
     height: '100%',
     display: 'flex',
     margin: 'auto',
+    overflow: 'hidden',
+    borderRadius: '4px',
     flexDirection: 'column',
     fontFamily: theme.typography.fontFamily,
     backgroundColor: '#f8f8f8',

@@ -117,6 +117,9 @@ CustomTable.protoTypes = {
 CustomTable.defaultProps = {
   maxHeight: '500px',
   maxWidth: '100%',
+  onSelect: () => {},
+  onChange: () => {},
+  onCheck: () => {},
 };
 
 export default CustomTable;

@@ -4,54 +4,47 @@ export default makeStyles(theme => ({
   newCreditRoot: {
     margin: 'auto',
     maxWidth: '1100px',
-    padding: '10px',
-    boxShadow: '-1px 2px 33px -17px rgba(0,0,0,0.4)',
-  },
-  breadcrumbs: {
-    fontSize: '0.8rem',
+    minWidth: '1000px',
     height: 'auto',
-    padding: '5px',
-  },
-  clientName: {
-    height: 'auto',
-    padding: '5px',
+    overflow: 'hidden',
+    boxShadow: '-1px 2px 33px -17px rgba(0,0,0,0.1)',
   },
   firstTitle: {
     borderTop: 'none !important',
+  },
+  newCreditContainer: {
+    maxWidth: '1023px',
+    padding: '20px 20px 32px 20px',
   },
   newCreditSection: {
     padding: '0px 0px 32px 0px',
     justifyContent: 'space-around',
     flexWrap: 'nowrap',
+    overflow: 'hidden',
     '& > div:first-child ': {
       borderRadius: '10px',
       overflow: 'hidden',
     },
   },
+  newCreditSectionB: {
+    flexWrap: 'nowrap',
+    padding: '0px',
+    margin: '0px',
+  },
   tableTitle: {
     color: theme.palette.text.primary,
-    borderTop: '1px solid lightgray',
+    borderTop: '1px solid #f1f1f1',
     padding: '32px 0px 24px 0px',
   },
-  separatorA: {
-    fontSize: '16px',
-    padding: '0',
-    margin: '0',
-  },
-  separatorB: {
-    fontSize: '20px',
-    padding: '0',
-    margin: '0',
-    textAlign: 'right',
-  },
   buttonsSection: {
-    padding: '0px 32px',
-    // border: '1px solid red',
+    width: '100%',
+    margin: '0px',
+    padding: '0px',
     '& button, button:disabled': {
       width: '101px',
       fontSize: '14.2px',
+      fontWeight: 'normal',
       marginLeft: '24px',
-      // border: '1px solid red',
       textTransform: 'capitalize',
     },
   },

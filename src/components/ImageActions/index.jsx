@@ -60,7 +60,7 @@ const Identification = ({ title, image }) => {
           alt={image.name}
           src={image.url}
           style={{
-            transform: `scale(${scale}) rotate(${deg}deg)`
+            transform: `scale(${scale}) rotate(${deg}deg)`,
           }}
         />
       </div>
@@ -96,8 +96,8 @@ Identification.defaultProps = {
   image: {
     key: 'INE',
     name: 'Frente',
-    url: 'http://www.liberaldictionary.com/wp-content/uploads/2019/02/id-9688.jpg'
-  }
+    url: 'http://www.liberaldictionary.com/wp-content/uploads/2019/02/id-9688.jpg',
+  },
 };
 
 export default Identification;

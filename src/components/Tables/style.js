@@ -58,6 +58,10 @@ const useStyles = makeStyles(theme => ({
       textAlign: 'left',
       padding: '10px 0px 10px 10px',
       color: theme.palette.text.primary,
+      '& p': {
+        color: theme.palette.text.primary,
+        fontSize: '16.2px',
+      },
       '&:nth-child(6) p div': {
         margin: '0px',
         padding: '0px 4px 3px 0px',

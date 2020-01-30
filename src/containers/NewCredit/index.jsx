@@ -5,13 +5,14 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+
 import Breadcrumbs from '../../components/Breadcrumbs';
 import Headline from '../../components/Headline';
 import IDCardUpload from '../../components/IDCardUpload';
-
 import SimulationCard from '../../components/SimulationCard';
 import Tables from '../../components/Tables';
 import { AMORTIZATION_TABLE, CHECKBOX_TABLE, RADIOBUTTON_TABLE } from '../../components/Tables/tableTypes';
+
 import useStyles from './style';
 
 const NewCredit = (props) => {
@@ -21,25 +22,54 @@ const NewCredit = (props) => {
     payroll,
     periods,
   } = props.data;
-  const SIMULATION = 'simulation';
-  const PULLED_APART = 'pulledApart';
+  const behavior = type;
+  const userName = 'Simulación de crédito: José Manuel Días Gómez';
+  const rootLabels = ['Inicio', 'Líquidos', 'Cálculo y solicitud nuevo crédito'];
   const TITLE_PAYROLL = 'Nómina(s) y porcentaje para retener pago';
   const TITLE_PERIODS = 'Periodo en el que comienza el descuento';
-  const userName = 'Simulación de crédito: José Manuel Días Gómez';
   const actionMessages = {
     simulation: 'Cálculo de pagos para nuevo crédito',
     pulledApart: 'Apartado y solicitud de crédito',
   };
-  const TITLE_AMORTIZATION = actionMessages[SIMULATION];
+  const TITLE_AMORTIZATION = actionMessages[behavior];
   const classes = useStyles();
-  const handleCancel = (e) => {
-    console.log(e);
+
+  const handleOnChange = () => {
+    /**
+     * TODO: Create code for onChange table action;
+     */
   };
+  const handleOnCheck = () => {
+    /**
+     * TODO: Create code for onCheck table action;
+     */
+  };
+  const handleOnSelect = () => {
+    /**
+     * TODO: Create code for onSelect table action;
+     */
+  };
+  const handleOnCancel = (e) => {
+    /**
+     * TODO: Create code for cancel action;
+     */
+  };
+  const handleOnSave = (e) => {
+    /**
+     * TODO: Create code for save action;
+     */
+  };
+  const handleOnConfirm = (e) => {
+    /**
+     * TODO: Create code for confirm action;
+     */
+  };
+
   return (
     <div className={classes.newCreditRoot}>
       <Container disableGutters={true} className={classes.newCreditContainer} maxWidth="md">
         <div className={classes.newCreditBreadcrumbs} >
-          <Breadcrumbs labels={['Inicio', 'Líquidos', 'Cálculo y solicitud nuevo crédito']} />
+          <Breadcrumbs labels={rootLabels} />
           <Headline label={userName} />
         </div>
         <Grid
@@ -56,7 +86,7 @@ const NewCredit = (props) => {
           </div>
           <Grid
             container
-            className={classes.newCreditSectionA}
+            className={classes.newCreditSectionB}
             direction="row"
             justify="space-around"
             alignItems="start"
@@ -72,11 +102,8 @@ const NewCredit = (props) => {
               <Tables
                 type={AMORTIZATION_TABLE}
                 data={amortization}
-                maxWidth='557px'
+                maxWidth='579px'
                 maxHeight='360px'
-                onChange={(e) => console.log(e)}
-                onSelect={(e) => console.log(e)}
-                onCheck={(e) => console.log(e)}
               />
             </div>
           </Grid>
@@ -99,9 +126,8 @@ const NewCredit = (props) => {
               data={payroll}
               maxWidth='100%'
               maxHeight='360px'
-              onChange={(e) => console.log(e)}
-              onSelect={(e) => console.log(e)}
-              onCheck={(e) => console.log(e)}
+              onChange={handleOnChange}
+              onCheck={handleOnCheck}
             />
           </div>
         </Grid>
@@ -123,9 +149,7 @@ const NewCredit = (props) => {
               data={periods}
               maxWidth='100%'
               maxHeight='360px'
-              onChange={(e) => console.log(e)}
-              onSelect={(e) => console.log(e)}
-              onCheck={(e) => console.log(e)}
+              onSelect={handleOnSelect}
             />
           </div>
         </Grid>
@@ -142,8 +166,8 @@ const NewCredit = (props) => {
             </Typography>
           </div>
           <div>
-            <IDCardUpload title='' labelPrimary='Frente' labelSecondary='Vuelta' twins={true}/>
-            <IDCardUpload title='' labelPrimary='Frente' twins={false} />
+            <IDCardUpload title='Identificación' labelPrimary='Frente' labelSecondary='Vuelta' multiple={true}/>
+            <IDCardUpload title='Nomina(s)' labelPrimary='Documento' twins={false} />
           </div>
         </Grid>
         <Grid
@@ -154,12 +178,11 @@ const NewCredit = (props) => {
           spacing={4}
           alignItems="start"
         >
-          <Button
-            onClick={handleCancel}
-          >
-            Cancelar
+          <Button onClick={handleOnCancel}>
+            Salir
           </Button>
           <Button
+            onClick={handleOnSave}
             variant="outlined"
             type="submit"
             color="primary"
@@ -167,6 +190,7 @@ const NewCredit = (props) => {
             Guardar
           </Button>
           <Button
+            onClick={handleOnConfirm}
             disabled={true}
             variant="outlined"
             type="submit"
