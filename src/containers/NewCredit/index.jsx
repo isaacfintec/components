@@ -17,6 +17,7 @@ import useStyles from './style';
 
 const NewCredit = (props) => {
   const {
+    history,
     type,
     amortization,
     payroll,
@@ -70,7 +71,7 @@ const NewCredit = (props) => {
       <Container disableGutters={true} className={classes.newCreditContainer} maxWidth="md">
         <div className={classes.newCreditBreadcrumbs} >
           <Breadcrumbs labels={rootLabels} />
-          <Headline label={userName} />
+          <Headline label={userName} history={history}/>
         </div>
         <Grid
           container

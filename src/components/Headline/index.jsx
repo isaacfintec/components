@@ -4,11 +4,13 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import useStyles from './style';
 
-const Headline = ({ label }) => {
+const Headline = ({ label, history }) => {
+
+  console.log(history);
 
   const classes = useStyles();
   const handleClick = (e) => {
-    console.log(e.currentTarget);
+    history.goBack();
   };
 
   return (

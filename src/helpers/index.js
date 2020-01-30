@@ -67,9 +67,29 @@ const dotStringSearch = (obj, search) => {
   }
 };
 
+/**
+ *
+ * @param {Number|String} number
+ * @param {Object} params
+ */
+const toMoneyFormat = (number, params = {}) => {
+  const {
+    locale = 'es-US',
+    options = { style: 'currency', currency: 'USD' },
+    fix = true,
+  } = params;
+
+  const formater = new Intl.NumberFormat(locale, options);
+  let formatedNumber = formater.format(number);
+  formatedNumber = fix ? formatedNumber.replace(/\.00$/, '') : formatedNumber;
+
+  return formatedNumber;
+};
+
 export {
   formatDate,
   getFirstLetter,
   encodeQueryData,
   dotStringSearch,
+  toMoneyFormat,
 };

@@ -16,7 +16,6 @@ function formatToCurrencyValue(data) {
   return `$${data.replace(/\d(?=(\d{3})+(\.\d+)?$)/g, '$&,')}`;
 }
 
-// eslint-disable-next-line import/prefer-default-export
 export const formatText = (_value, currentValue, format) => {
   const value = _value.toString();
   if (!value.length || value === '$') {
@@ -44,7 +43,7 @@ export const formatText = (_value, currentValue, format) => {
   return value;
 };
 
-export const objToArray = (obj) => {
+export const objToArray = obj => {
   return Object.keys(obj)
     .map(i => obj[i])
     .filter(data => data);

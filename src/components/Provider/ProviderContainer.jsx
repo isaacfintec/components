@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Tables from '../Tables';
 import { AMORTIZATION_TABLE, CHECKBOX_TABLE, RADIOBUTTON_TABLE } from '../Tables/tableTypes';
 import NewCredit from '../../containers/NewCredit';
 
@@ -9,6 +8,7 @@ const ProviderContainer = (props) => {
     amortization,
     periods,
     payroll,
+    history,
   } = props;
 
   const _type = AMORTIZATION_TABLE;
@@ -32,7 +32,7 @@ const ProviderContainer = (props) => {
   // const type = 'pulledApart';
 
   return (
-    <NewCredit data={{type, amortization, periods, payroll }} />
+    <NewCredit data={{history, type, amortization, periods, payroll}} />
   );
 };
 

@@ -29,12 +29,7 @@ import Credits from '../containers/Credits';
 import CreditInfoEmployee from '../containers/Credits/CreditInfoEmployee';
 import CreditDetail from '../containers/Credits/CreditInfoEmployee/CreditDetail';
 import Products from '../containers/Products';
-import Tables from '../components/Tables';
-import {
-  AMORTIZATION_TABLE,
-  CHECKBOX_TABLE,
-  RADIOBUTTON_TABLE,
-} from '../components/Tables/tableTypes';
+import Provider from '../components/Provider';
 
 const history = createBrowserHistory();
 const authUserName = isAuth() ? getAuthUser().fullName : '';
@@ -104,70 +99,24 @@ const ProductsRoutes = () => (
     <Route exact path="/products" component={Products} />
   </Switch>
 );
-
-const checkbox = [
-  {job: 'Docente tipo A', dependency: '01-27-2020', years: '12 años', capacity: 15900.00, available: 1500.30 },
-  {job: 'Docente tipo B', dependency: 'Sec. Estatal 115', years: '12 años', capacity: 15900.00, available: 1500.30 },
-  {job: 'Docente tipo C', dependency: 'Sec. Estatal 116', years: '12 años', capacity: 15900.00, available: 1500.30 },
-  {job: 'Docente tipo D', dependency: 'Sec. Estatal 117', years: '12 años', capacity: 15900.00, available: 1500.30 },
-  {job: 'Docente tipo E', dependency: 'Sec. Estatal 118', years: '12 años', capacity: 15900.00, available: 1500.30 },
-  {job: 'Docente tipo F', dependency: 'Sec. Estatal 119', years: '12 años', capacity: 15900.00, available: 1500.30 },
-  {job: 'Docente tipo G', dependency: 'Sec. Estatal 120', years: '12 años', capacity: 15900.00, available: 1500.30 },
-  {job: 'Docente tipo H', dependency: 'Sec. Estatal 121', years: '12 años', capacity: 15900.00, available: 1500.30 },
-  {job: 'Docente tipo I', dependency: 'Sec. Estatal 122', years: '12 años', capacity: 15900.00, available: 1500.30 },
-  {job: 'Docente tipo J', dependency: 'Sec. Estatal 123', years: '12 años', capacity: 15900.00, available: 1500.30 },
-  {job: 'Docente tipo K', dependency: 'Sec. Estatal 124', years: '12 años', capacity: 15900.00, available: 1500.30 },
-  {job: 'Docente tipo L', dependency: 'Sec. Estatal 125', years: '12 años', capacity: 15900.00, available: 1500.30 },
-  {job: 'Docente tipo M', dependency: 'Sec. Estatal 126', years: '12 años', capacity: 15900.00, available: 1500.30 },
-];
-const amortization = [
-  {numberPayment: '1', date: '2020-01-27', capitalPayment: 9, interest: 83.84, payment: 92.34, balance: 4447.32 },
-  {numberPayment: '2', date: '01-27-2020', capitalPayment: 9, interest: 83.84, payment: 92.34, balance: 4447.32 },
-  {numberPayment: '3', date: '01-27-2020', capitalPayment: 9, interest: 83.84, payment: 92.34, balance: 4447.32 },
-  {numberPayment: '4', date: '01-27-2020', capitalPayment: 9, interest: 83.84, payment: 92.34, balance: 4447.32 },
-  {numberPayment: '5', date: '01-27-2020', capitalPayment: 9, interest: 83.84, payment: 92.34, balance: 4447.32 },
-  {numberPayment: '6', date: '01-27-2020', capitalPayment: 9, interest: 83.84, payment: 92.34, balance: 4447.32 },
-  {numberPayment: '7', date: '01-27-2020', capitalPayment: 9, interest: 83.84, payment: 92.34, balance: 4447.32 },
-  {numberPayment: '8', date: '01-27-2020', capitalPayment: 9.22, interest: 83.84, payment: 92.34, balance: 4447.32 },
-  {numberPayment: '8', date: '01-27-2020', capitalPayment: 9.22, interest: 83.84, payment: 92.34, balance: 4447.32 },
-  {numberPayment: '10', date: '01-27-2020', capitalPayment: 9.22, interest: 83.84, payment: 92.34, balance: 4447.32 },
-  {numberPayment: '11', date: '01-27-2020', capitalPayment: 9.22, interest: 83.84, payment: 92.34, balance: 4447.32 },
-  {numberPayment: '12', date: '01-27-2020', capitalPayment: 9.22, interest: 83.84, payment: 92.34, balance: 4447.32 },
-  {numberPayment: '13', date: '2020-01-27', capitalPayment: 9.22, interest: 83.84, payment: 92.34, balance: 4447.32 },
-  {numberPayment: '14', date: '01-27-2020', capitalPayment: 9.22, interest: 83.84, payment: 92.34, balance: 4447.32 },
-  {numberPayment: '15', date: '01-27-2020', capitalPayment: 9.22, interest: 83.84, payment: 92.34, balance: 4447.32 },
-  {numberPayment: '16', date: '01-27-2020', capitalPayment: 9.22, interest: 83.84, payment: 92.34, balance: 4447.32 },
-  {numberPayment: '17', date: '01-27-2020', capitalPayment: 9.22, interest: 83.84, payment: 92.34, balance: 4447.32 },
-  {numberPayment: '18', date: '01-27-2020', capitalPayment: 9.22, interest: 83.84, payment: 92.34, balance: 4447.32 },
-  {numberPayment: '19', date: '01-27-2020', capitalPayment: 9.22, interest: 83.84, payment: 92.34, balance: 4447.32 },
-];
-const radiobutton = [
-  { number: '2', period: '2da Quincena', startdate: '13/Enero/2020-27/Enero/2020' },
-  { number: '3', period: '1ra Quincena', startdate: '13/Enero/2020-27/Enero/2020' },
-  { number: '4', period: '4ta Quincena', startdate: '13/Enero/2020-27/Enero/2020' },
-  { number: '5', period: '6ta Quincena', startdate: '13/Enero/2020-27/Enero/2020' },
-  { number: '6', period: '7ma Quincena', startdate: '13/Enero/2020-27/Enero/2020' },
-];
-
-const TestTable = () => {
+const Init = () => {
   return (
-    <Tables
-      type={AMORTIZATION_TABLE}
-      data={amortization}
-      maxWidth='100%'
-      maxHeight='500px'
-      onSelect={ (e) => console.log(e)}
-      onChange={ (e) => console.log(e)}
-      onCheck={ (e) => console.log(e)}
-    />
+    <div>
+      <a href="/test/user">Go to test/user</a>
+    </div>
   );
 };
-
-
+const TestRoutes = () => (
+  <Switch>
+    <Route exact path="/test" component={Init} />
+    <Route exact path="/test/user" component={Provider} />
+    <Route exact path="/test/tablefull" component={Products} />
+  </Switch>
+);
 const Routes = () => (
   <Router history={history}>
     <Switch>
-      <Route exact path="/test" component={TestTable} />
+      <Route exact path="/test" component={TestRoutes} />
       <LoginRoute exact path="/" component={Login} />
       <LoginRoute path="/login" component={Login} />
       <PrivateRoute path="/panel" component={Panel} />

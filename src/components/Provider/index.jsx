@@ -2,14 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import ProviderContainer from './ProviderContainer';
 import allReducers from './reducers';
 
 const store = createStore(allReducers);
 
-const ProviderApp = ({ children }) => {
+const ProviderApp = ({ history }) => {
   return (
-    <Provider store={store}>
-      { children }
+    <Provider store={store} >
+      <ProviderContainer history={history}/>
     </Provider>
   );
 };
