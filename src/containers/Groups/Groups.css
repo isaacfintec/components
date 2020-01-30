@@ -1,0 +1,31 @@
+.group__create {
+  background-color: #fff;
+  margin-bottom: 10px !important;
+  padding: 0px !important;
+}
+
+.group__create span {
+  font-size: 18px !important;
+  font-weight: bold !important;
+}
+
+.groups__cart {
+  cursor: pointer;
+}
+
+.groups__cart-body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.groups__cart-body > p {
+  padding: 25px;
+} 
+
+.groups__cart-actions {
+  display: flex;
+  justify-content: right;
+}

@@ -1,0 +1,36 @@
+.helpme-body__container {
+  padding: 25px;
+  margin-top: 5px;
+  min-height: 50vh;
+}
+
+.helpme-body__step svg text {
+  display: none;
+}
+
+.helpme-body__title {
+  text-align: center !important;
+  font-size: 25px !important;
+  font-weight: bold !important;
+  margin-bottom: 25px !important;
+}
+
+.helpme-body__sub-title {
+  font-size: 16px !important;
+  font-weight: bold !important;
+  margin-bottom: 15px !important;
+}
+
+.helpme-body__option-title {
+  margin: 7px 0px;
+  cursor: pointer;
+}
+
+.helpme-body__title-item {
+  font-size: 23px !important;
+  font-weight: bold !important;
+}
+
+.helpme-body__title-subt-title {
+
+}

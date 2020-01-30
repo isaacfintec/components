@@ -1,0 +1,23 @@
+.users-edit__container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+.users-edit__avatar {
+  position: absolute !important;
+  top: -50px;
+  left: -50px;
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.users-edit__container-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.users-edit__container-form-actions {
+  display: flex;
+  justify-content: flex-end;
+}

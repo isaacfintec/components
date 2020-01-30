@@ -1,0 +1,112 @@
+:root {
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  line-height: 1.15;
+}
+
+body, #root {
+  margin: 0;
+  height: 100%;
+  overflow: auto;
+  background-color: #fff !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/*** SPACE START ***/
+.full {
+  width: 100%;
+  height: 100%;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.no-margin {
+  margin: 0px !important;
+}
+
+.no-margin-top {
+  margin-top: 0px !important;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0px !important;
+}
+
+.paper {
+  padding: 25px 50px;
+}
+/*** SPACE END ***/
+
+/*** TEXT START ***/
+.text-center {
+  text-align: center;
+}
+
+.font-lighter {
+  font-weight: lighter !important;
+}
+
+.normalize-link {
+  text-decoration: none;
+  color: inherit;
+}
+/*** TEXT END ***/
+
+/*** COLORS START ***/
+.bg-success {
+  background-color: var(--success-color) !important;
+}
+
+.bg-warning {
+  background-color: var(--warning-color) !important;
+}
+
+.bg-danger {
+  background-color: var(--danger-color) !important;
+}
+
+.color-white {
+  color: #fff !important;
+}
+/*** COLORS END ***/
+
+/*** POSITION START ***/
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+}
+
+
+.position-relative {
+  position: relative !important;
+}
+/*** POSITION END ***/
+
+
+.no-radius {
+  border-radius: 0px !important;
+}
+
+.swal2-container {
+  z-index: 9999 !important;
+}

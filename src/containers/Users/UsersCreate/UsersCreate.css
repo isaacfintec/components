@@ -1,0 +1,10 @@
+.users-create__paper {
+  padding: 50px;
+  padding-top: 25px;
+}
+
+.users-create__form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

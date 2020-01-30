@@ -1,0 +1,35 @@
+.messages-right__paper {
+  padding: 25px;
+  height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  display: block;
+}
+
+.messages-right__message {
+  max-width: 250px !important;
+  border: dashed 1px #c1c1c1 !important;
+  border-radius: 25px !important;
+  margin: 10px 0px !important;
+}
+
+.messages-right__message-reverse {
+  flex-direction: row-reverse;
+  float: right;
+}
+
+.messages-right__search-container {
+  position: absolute;
+  bottom: 10px;
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  max-width: 55vw !important;
+}
+
+.messages-right__search {
+  width: 100%;
+  border: solid 1px #c1c1c1 !important;
+  padding: 0px 25px;
+  border-radius: 25px !important;
+}

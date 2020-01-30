@@ -1,0 +1,23 @@
+.login__paper {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  background-color: #fff;
+}
+
+.login__avatar {
+  margin: 10px;
+  background-color: #040404;
+}
+
+.login__main-form {
+  width: 100%;
+  margin: 10px;
+}
+
+.login__main-form__submit {
+  margin-top: 15px !important;
+  margin-bottom: 25px !important;
+}
