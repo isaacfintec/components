@@ -5,34 +5,42 @@ import NewCredit from '../../containers/NewCredit';
 
 const ProviderContainer = (props) => {
   const {
+    history,
     amortization,
     periods,
     payroll,
-    history,
+    children,
   } = props;
+  // const _type = AMORTIZATION_TABLE;
 
-  const _type = AMORTIZATION_TABLE;
-
-  const dataProvider = (_type) => {
-    switch (_type) {
-    case AMORTIZATION_TABLE:
-      return amortization;
-    case CHECKBOX_TABLE:
-      return payroll;
-    case RADIOBUTTON_TABLE:
-      return periods;
-    default:
-      const emptyArray = [];
-      return emptyArray;
-    }
-  };
-
-  const data = dataProvider(_type);
+  // const dataProvider = (_type) => {
+  //   switch (_type) {
+  //   case AMORTIZATION_TABLE:
+  //     return amortization;
+  //   case CHECKBOX_TABLE:
+  //     return payroll;
+  //   case RADIOBUTTON_TABLE:
+  //     return periods;
+  //   default:
+  //     const emptyArray = [];
+  //     return emptyArray;
+  //   }
+  // };
+  // const data = dataProvider(_type);
   const type = 'simulation';
-  // const type = 'pulledApart';
 
+  const RenderConmponent = (values) => (
+    <div>
+      { React.cloneElement(children, values) }
+    </div>
+  );
   return (
-    <NewCredit data={{history, type, amortization, periods, payroll}} />
+    <RenderConmponent
+      type={type}
+      history={history}
+      amortization={amortization}
+      periods={periods}
+      payroll={payroll}/>
   );
 };
 

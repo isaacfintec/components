@@ -22,7 +22,7 @@ const NewCredit = (props) => {
     amortization,
     payroll,
     periods,
-  } = props.data;
+  } = props;
   const behavior = type;
   const userName = 'Simulación de crédito: José Manuel Días Gómez';
   const rootLabels = ['Inicio', 'Líquidos', 'Cálculo y solicitud nuevo crédito'];
@@ -78,7 +78,7 @@ const NewCredit = (props) => {
           className={classes.newCreditSection}
           direction="column"
           justify="space-around"
-          alignItems="start"
+          alignItems="flex-start"
         >
           <div>
             <Typography variant="body1" className={clsx(classes.tableTitle, classes.firstTitle)}>
@@ -90,7 +90,7 @@ const NewCredit = (props) => {
             className={classes.newCreditSectionB}
             direction="row"
             justify="space-around"
-            alignItems="start"
+            alignItems="flex-start"
           >
             <div>
               <SimulationCard
@@ -114,7 +114,6 @@ const NewCredit = (props) => {
           className={classes.newCreditSection}
           direction="column"
           justify="center"
-          alignItems="start"
         >
           <div>
             <Typography variant="body1" className={classes.tableTitle}>
@@ -126,7 +125,7 @@ const NewCredit = (props) => {
               type={CHECKBOX_TABLE}
               data={payroll}
               maxWidth='100%'
-              maxHeight='360px'
+              maxHeight='362px'
               onChange={handleOnChange}
               onCheck={handleOnCheck}
             />
@@ -137,7 +136,6 @@ const NewCredit = (props) => {
           className={classes.newCreditSection}
           direction="column"
           justify="center"
-          alignItems="start"
         >
           <div>
             <Typography variant="body1" className={classes.tableTitle} >
@@ -149,7 +147,7 @@ const NewCredit = (props) => {
               type={RADIOBUTTON_TABLE}
               data={periods}
               maxWidth='100%'
-              maxHeight='360px'
+              maxHeight='362px'
               onSelect={handleOnSelect}
             />
           </div>
@@ -159,7 +157,6 @@ const NewCredit = (props) => {
           className={classes.newCreditSection}
           direction="column"
           justify="center"
-          alignItems="start"
         >
           <div>
             <Typography variant="body1" className={classes.tableTitle} >
@@ -167,8 +164,8 @@ const NewCredit = (props) => {
             </Typography>
           </div>
           <div>
-            <IDCardUpload title='Identificación' labelPrimary='Frente' labelSecondary='Vuelta' multiple={true}/>
-            <IDCardUpload title='Nomina(s)' labelPrimary='Documento' twins={false} />
+            <IDCardUpload title='Identificación' labelPrimary='Frente' labelSecondary='Vuelta' multiple/>
+            <IDCardUpload title='Nomina(s)' labelPrimary='Documento' />
           </div>
         </Grid>
         <Grid
@@ -177,7 +174,6 @@ const NewCredit = (props) => {
           direction="row"
           justify="flex-end"
           spacing={4}
-          alignItems="start"
         >
           <Button onClick={handleOnCancel}>
             Salir

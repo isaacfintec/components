@@ -7,10 +7,13 @@ import allReducers from './reducers';
 
 const store = createStore(allReducers);
 
-const ProviderApp = ({ history }) => {
+const ProviderApp = ({ history, children }) => {
+  console.log(history);
   return (
     <Provider store={store} >
-      <ProviderContainer history={history}/>
+      <ProviderContainer history={history}>
+        { children }
+      </ProviderContainer>
     </Provider>
   );
 };

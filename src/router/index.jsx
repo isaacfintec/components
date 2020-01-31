@@ -29,7 +29,10 @@ import Credits from '../containers/Credits';
 import CreditInfoEmployee from '../containers/Credits/CreditInfoEmployee';
 import CreditDetail from '../containers/Credits/CreditInfoEmployee/CreditDetail';
 import Products from '../containers/Products';
+
 import Provider from '../components/Provider';
+import FullTable from '../components/FullTable';
+import NewCredit from '../containers/NewCredit';
 
 const history = createBrowserHistory();
 const authUserName = isAuth() ? getAuthUser().fullName : '';
@@ -102,21 +105,28 @@ const ProductsRoutes = () => (
 const Init = () => {
   return (
     <div>
-      <a href="/test/user">Go to test/user</a>
+      <a href="/test/container"><button>Go to test/container</button></a>
     </div>
   );
 };
+const ProviderContainer = ({history}) => (
+  <Provider history={history}>
+    <NewCredit/>
+  </Provider>
+);
 const TestRoutes = () => (
   <Switch>
     <Route exact path="/test" component={Init} />
-    <Route exact path="/test/user" component={Provider} />
-    <Route exact path="/test/tablefull" component={Products} />
+    <Route exact path="/test/container" component={ProviderContainer} />
+    <Route exact path="/test/fulltable" component={FullTable} />
   </Switch>
 );
 const Routes = () => (
   <Router history={history}>
     <Switch>
       <Route exact path="/test" component={TestRoutes} />
+      <Route exact path="/test/container" component={TestRoutes} />
+      <Route exact path="/test/fulltable" component={TestRoutes} />
       <LoginRoute exact path="/" component={Login} />
       <LoginRoute path="/login" component={Login} />
       <PrivateRoute path="/panel" component={Panel} />

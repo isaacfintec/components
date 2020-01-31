@@ -21,8 +21,8 @@ const ButtonVertIcon = (props) => {
   };
 
   const newTab = () => {
-    window.localStorage.setItem('fullWidthTable', JSON.stringify(data));
-    window.open( "/test", "_blank");
+    window.localStorage.setItem('mytable', JSON.stringify(data));
+    window.open( "/test/fulltable", "_blank");
   };
 
   const handleButtonActions = button => (e) => {

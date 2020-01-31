@@ -4,7 +4,7 @@ export default makeStyles(theme => ({
   newCreditRoot: {
     margin: 'auto',
     maxWidth: '1100px',
-    minWidth: '1000px',
+    minWidth: '1100px',
     height: 'auto',
     overflow: 'hidden',
     boxShadow: '-1px 2px 33px -17px rgba(0,0,0,0.1)',
@@ -20,6 +20,7 @@ export default makeStyles(theme => ({
     padding: '0px 0px 32px 0px',
     justifyContent: 'space-around',
     flexWrap: 'nowrap',
+    height: 'auto',
     overflow: 'hidden',
     '& > div:first-child ': {
       borderRadius: '10px',

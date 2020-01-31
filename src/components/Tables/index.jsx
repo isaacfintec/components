@@ -21,7 +21,6 @@ const CustomTable = (props) => {
     onCheck,
     type,
   } = props;
-
   const classes = useStyles();
   let listOfColums = columnsType(type);
   const componentRef = useRef();

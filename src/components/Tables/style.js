@@ -62,6 +62,9 @@ const useStyles = makeStyles(theme => ({
         color: theme.palette.text.primary,
         fontSize: '16.2px',
       },
+      '& legend': {
+        display: 'none',
+      },
       '&:nth-child(6) p div': {
         margin: '0px',
         padding: '0px 4px 3px 0px',
@@ -74,12 +77,11 @@ const useStyles = makeStyles(theme => ({
       },
       '&:nth-child(6) fieldset': {
         padding: '0px',
-        margin: '0px',
+        marginTop: '4px',
         height: '40px !important',
       },
       '&:nth-child(6) svg': {
         fontSize: '15px',
-        // border: '1px solid red !important',
       },
     },
     '& td div': {
